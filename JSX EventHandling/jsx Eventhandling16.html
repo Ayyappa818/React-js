@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Reset the textbox text on a button click -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            function abc(e){
+                document.getElementById("d3").innerHTML=e.target.value
+            }
+            function xyz(e){
+                document.getElementById("d3").innerHTML=""
+                document.getElementById("d2").value=""
+            }
+            var js1=<div>
+                <input onKeyUp={(e)=>{abc(e)}} type="text" id="d2"/>
+                <br/>
+                <br/>
+                <button onClick={(e)=>{xyz(e)}}>Clear Text</button>
+                <h1 id="d3"></h1>
+            </div>
+            ReactDOM.render(js1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

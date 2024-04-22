@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- GenUI with JSX -->
+    <body>
+        <form action="">
+            <input type="text" name="firstname" placeholder="Enter the firstname" onkeyup="handleInput(event)">
+            <br>
+            <input type="text" name="lastname" placeholder="Enter the lastname" onkeyup="handleInput(event)">
+            <br>
+            <input type="text" name="age" placeholder="Enter the age" onkeyup="handleInput(event)">
+            <br>
+            <button>Add Employee</button>
+        </form>
+        <table>
+            <thead>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </thead>
+            <tbody id="tb1">
+
+            </tbody>
+        </table>
+        <script type="text/babel">
+             var employees = [
+                {
+                    firstname:'praveen',
+                    lastname:'gubbala',
+                    age:38,
+                    gender:'male'
+                },
+                {
+                    firstname:'srikant',
+                    lastname:'gubbala',
+                    age:28,
+                    gender:'male'
+                },
+                {
+                    firstname:'kumari',
+                    lastname:'asdasd',
+                    age:30,
+                    gender:'female'
+                },
+                {
+                    firstname:'ramesh',
+                    lastname:'reddy',
+                    age:11,
+                    gender:'male'
+                }
+            ]
+        </script>
+    </body>
+</html>

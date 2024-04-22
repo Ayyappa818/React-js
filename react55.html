@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Generation of table using JSX -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var students = [
+                {
+                    firstname:'pravee',
+                    lastname:'gubbala',
+                    age:38
+                },
+                {
+                    firstname:'anupama',
+                    lastname:'reddy',
+                    age:28
+                },
+                {
+                    firstname:'priya',
+                    lastname:'kaman',
+                    age:23
+                },
+                {
+                    firstname:'kiran',
+                    lastname:'rao',
+                    age:25
+                },
+                {
+                    firstname:'triveni',
+                    lastname:'manu',
+                    age:29
+                }
+            ];
+            function deletetask(i){
+                students.splice(i,1);
+                console.log(students);
+                ReactDOM.render(genTable(),document.getElementById('d1'))
+            }
+            function genTable(){
+            var ja1=<table border="2">
+                <thead>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Option</th>
+                </thead>
+                <tbody>
+                {
+                    students.map((s,i)=>{
+                        return <tr>
+                            <td>{s.firstname}</td>
+                            <td>{s.lastname}</td>
+                            <td>{s.age}</td>
+                            <td><button onClick={()=>{
+                                deletetask(i)
+                            }}>Delete</button></td>
+                        </tr>
+                    })
+                }
+                </tbody>
+            </table>
+            return ja1;
+        }
+     ReactDOM.render(genTable(),document.getElementById("d1"))
+        </script>
+    </body>
+</html>

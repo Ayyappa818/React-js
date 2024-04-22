@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Print the images as table cells from array of image urls -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var ar=["https://i.pinimg.com/736x/23/28/27/2328270005160e6b25abc28513ed075f.jpg",
+        "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974740628/kaiju-no-8-vol-8-9781974740628_hr.jpg",
+        "https://jpbookstore.com/cdn/shop/products/91jTx62f57L_1024x1024@2x.jpg?v=1667832978",
+        "https://upload.wikimedia.org/wikipedia/en/b/b2/Ninja_Kamui.png"]
+        var a1 =<div>
+           <table>
+            <tr>
+                 {
+                    ar.map((s)=>{
+                        return <td><img src={s} width="50%"/></td>
+                    })
+                }
+                </tr>
+        </table>
+        </div>
+        ReactDOM.render(a1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

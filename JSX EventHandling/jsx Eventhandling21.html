@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Display respective image on radio button value -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var maleimg="https://st3.depositphotos.com/19428878/37071/v/450/depositphotos_370714622-stock-illustration-businessman-icon-vector-male-avatar.jpg"
+            var femaleimg="https://previews.123rf.com/images/putracetol/putracetol1808/putracetol180800174/106705582-female-logo-icon-design.jpg"
+        function abc(e){
+            if(e.target.value==="male"){
+                document.getElementById("d4").src=maleimg
+            }
+            else{
+                document.getElementById("d4").src=femaleimg
+            }
+        }
+            var js1=<div>
+                <input onChange={(e)=>{abc(e)}} type="radio" value="male" name="gender" id="d2"/>:Male
+                <input onChange={(e)=>{abc(e)}} type="radio" value="female" name="gender" id="d3"/>:Female
+                <div><img id="d4" width="50%"/></div>
+            </div>
+            ReactDOM.render(js1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

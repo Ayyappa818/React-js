@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Display substraction of two text box values in h1 on textbox on button click -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            function abc(e){
+                var x=+document.getElementById("d2").value 
+                var y=+document.getElementById("d3").value 
+                document.getElementById("d4").innerHTML=x-y
+            }
+            var js1=<div>
+                <input type="text" placeholder="Enter a number" id="d2"/><br/>
+                <input type="text" placeholder="Enter a number" id="d3"/>
+                <br/>
+                <br/>
+                <button onClick={(e)=>{abc(e)}}>Substract</button>
+                <h1 id="d4"></h1>
+            </div>
+            ReactDOM.render(js1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

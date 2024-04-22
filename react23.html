@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- print array values in sorted order in list items in jsx -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var ar=[12,23,19,23,48,39]
+            var a1=<div>
+                {
+                    ar.sort((a,b)=>{
+                        return a<b?-1:1
+                    }).map((s)=>{
+                        return <li>{s}</li> 
+                    })
+                }
+                </div>
+                ReactDOM.render(a1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

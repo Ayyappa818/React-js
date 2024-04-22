@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Apply the border width with variable value to JSX h1 -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var a="23"
+            var ja2=<div><h1 style={{border:`${a}px solid`}}>Welcome Edupoly</h1>
+            </div>
+            ReactDOM.render(ja2,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

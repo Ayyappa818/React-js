@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    </head>
+    <!-- Display each string of array in flex boxes -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var ar=["praveen","ravi","dasu","Kiran"]
+            var ja1=<div style={{display:"flex"}}>
+                {
+                    ar.map((s)=>{
+                        return <div style={{border:'1px solid',padding:"10px",margin:"10px"}}>{s}</div>
+                    })
+                }
+            </div>
+        ReactDOM.render(ja1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>
