@@ -4,20 +4,19 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Bindevent handler with arguments as index for list item genereted from array -->
+    <!-- Push text box value to an array console the array -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
-            var ar=["Ayyappa","Anji","Tarun","vikas","thota","siva"]
-            function abc(i){
-                alert(i)
+            function abc(e){
+                var a=document.getElementById("d3").value
+                ar.push(a)
+                console.log(ar)
             }
+            var ar=[]
             var js1=<div>
-                {
-                    ar.map((s,i)=>{
-                        return <li id="d2" onClick={(e)=>{abc(i)}}>{s}</li>
-                    })
-                }
+                <input type="text" name="" id="d3"/>
+                <button onClick={(e)=>{abc(e)}}>Click here push value</button>
             </div>
             ReactDOM.render(js1,document.getElementById("d1"))
         </script>

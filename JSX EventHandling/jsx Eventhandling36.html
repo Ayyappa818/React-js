@@ -4,20 +4,23 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Bindevent handler with arguments as index for list item genereted from array -->
+    <!-- Implement counter application -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
-            var ar=["Ayyappa","Anji","Tarun","vikas","thota","siva"]
-            function abc(i){
-                alert(i)
+            function abc(e){
+                x++;
+                document.getElementById("d2").innerHTML=x
             }
+            function xyz(e){
+                x--;
+                document.getElementById("d2").innerHTML=x
+            }
+            var x=120;
             var js1=<div>
-                {
-                    ar.map((s,i)=>{
-                        return <li id="d2" onClick={(e)=>{abc(i)}}>{s}</li>
-                    })
-                }
+                <h1 id="d2">{x}</h1>
+                <button onClick={(e)=>{abc(e)}}>Increment</button>
+                <button onClick={(e)=>{xyz(e)}}>decrement</button>
             </div>
             ReactDOM.render(js1,document.getElementById("d1"))
         </script>

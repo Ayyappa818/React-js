@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Push text box value to an array display in list items -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            function abc(e){
+                var x=document.getElementById("d2").value 
+                document.getElementById("d3").innerHTML=""
+                ar.push(x)
+                ar.forEach((a)=>{
+                    var z=document.createElement("li")
+                    z.innerHTML=a
+                    var y=document.getElementById("d3")
+                    y.appendChild(z)
+                })
+            }
+            var ar=[]
+            var js1=<div>
+                <input type="text" name="" id="d2"/>
+                <button onClick={(e)=>{abc(e)}}>Click here push value</button>
+                <br/>
+                <br/>
+                <ul id="d3"></ul>
+            </div>
+            ReactDOM.render(js1,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

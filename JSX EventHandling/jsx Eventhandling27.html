@@ -4,18 +4,18 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Bindevent handler with arguments as index for list item genereted from array -->
+    <!-- Bindevent handler with arguments as values for list item genereted from array -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
             var ar=["Ayyappa","Anji","Tarun","vikas","thota","siva"]
-            function abc(i){
-                alert(i)
+            function abc(s){
+                alert(s)
             }
             var js1=<div>
                 {
-                    ar.map((s,i)=>{
-                        return <li id="d2" onClick={(e)=>{abc(i)}}>{s}</li>
+                    ar.map((s)=>{
+                        return <li id="d2" onClick={(e)=>{abc(s)}}>{s}</li>
                     })
                 }
             </div>
