@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Display different images conditionally React component -->
+    <body>
+        <div id="d1"></div>
+        <!-- <script type="text/babel">
+            var a=+prompt()
+            var ar=["https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg","https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg"]
+            var Abc=(()=>{
+                return <div><img src={a%2===0?ar[0]:ar[1]} width="50%"/></div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script> -->
+        <script type="text/babel">
+            var a=+prompt()
+            var Abc=(()=>{
+                return <div>{a%2===0?<img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg"width="40%"/>:<img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg" width="40%"/>}</div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

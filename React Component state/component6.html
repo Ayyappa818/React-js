@@ -4,19 +4,18 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Print first two characters of array values in h1 elements copy -->
+    <!-- Print first two character of array values in React component -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
-            var ar=["Ayyappa","Sunanda","Love"]
-            var a1=<div>
-                {
-                    ar.map((s)=>{
-                        return <h1>{s.slice(0,2)}</h1>
-                    })
-                }
-            </div>
-        ReactDOM.render(a1,document.getElementById("d1"))
+            var ar=["Ayyappa","Anji","Tarun","vikas"]
+            var Abc=(()=>{
+                return <h2>{ar.map(function(s,i){
+                    return <h2>{s.slice(0,2)}</h2>
+                })
+            }</h2>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
         </script>
     </body>
 </html>

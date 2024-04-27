@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Todolist-JSX -->
+    <body>
+        <div style="border: 5px solid red; padding: 10px;" id="d1"></div>
+        <script type="text/babel">
+            var Abc=(()=>{
+                function abc(e){
+                var x=document.getElementById("d2").value
+               setAr([...ar,x])
+            }
+                var [ar,setAr]=React.useState(["Cooldrinks","milkshake","Coolers","Mocktails"])
+            return <div style={{border:"1px solid",padding:"10px"}}>
+                <div>
+                    <h1>Todolist</h1>
+                <input type="text" id="d2"/><button onClick={(e)=>{abc(e)}}>ADD</button>
+                <ul id="d3">
+                {
+                    ar.map((s)=>{
+                        return <li id="d4">{s}</li>
+                    })
+                }
+              </ul>
+                </div>
+            </div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

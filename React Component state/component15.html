@@ -4,19 +4,15 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Print first two characters of array values in h1 elements copy -->
+    <!-- Display variable value is positive or negative in React component -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
-            var ar=["Ayyappa","Sunanda","Love"]
-            var a1=<div>
-                {
-                    ar.map((s)=>{
-                        return <h1>{s.slice(0,2)}</h1>
-                    })
-                }
-            </div>
-        ReactDOM.render(a1,document.getElementById("d1"))
+            var a=+prompt()
+            var Xyz=(()=>{
+                return <h1>{a>=0?"positive":"negative"}</h1>
+            })
+            ReactDOM.render(<Xyz/>,document.getElementById("d1"))
         </script>
     </body>
 </html>

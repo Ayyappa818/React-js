@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Apply green color if string length is even red for odd in React Component -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var a=+prompt()
+            var Abc=(()=>{
+                var [xy,setXy]=React.useState(a)
+                var ev="green"
+                var od="red"
+                return <div>
+                    {
+                        <h1 style={xy%2===0?{color:ev}:{color:od}}>{xy}</h1>
+                    }
+                </div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

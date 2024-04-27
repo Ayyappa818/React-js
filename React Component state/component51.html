@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Generate list of strings for the given array of strings in React component -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=(()=>{
+                var [xy,setXy]=React.useState(['akshay', 'prudvi', 'mounika', 'kavya'])
+                return <div>
+                    <div style={{border:"10px solid green",color:"gray"}}><h1 style={{color:"red"}}>Welcome to Edupoly</h1></div>
+                    {
+                        xy.map((s)=>{
+                            return <li>{s}</li>
+                        })
+                    }
+                </div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

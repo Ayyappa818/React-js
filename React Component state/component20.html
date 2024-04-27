@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Print array strings ol and ul in React component -->
+    <body>
+        <div id="d1"></div>
+        <!-- <script type="text/babel">
+            var ar=["dog","cat","pig","mouse","tiger","lion"]
+            var Abc=(()=>{
+                return <div>
+                <ol>{
+                    ar.map((s)=>{
+                    return <li>{s}</li>
+                    })
+                }</ol>
+                <ul>
+                    {
+                        ar.map((s)=>{
+                            return <li>{s}</li>
+                        })
+                    }
+                </ul>
+                </div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script> -->
+        <script type="text/babel">
+            var Abc=(()=>{
+                var [xy,setXy]=React.useState(["dog","cat","pig","mouse","tiger","lion"])
+                return <div>
+                    {
+                        <ol>
+                            {
+                                xy.map((s)=>{return <li>{s}</li>})
+                            }
+                        </ol>
+                    }
+                    {
+                        <ul>
+                            {
+                                xy.map((s)=>{return <li>{s}</li>})
+                            }
+                        </ul>
+                    }
+                </div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

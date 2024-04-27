@@ -4,19 +4,15 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Print first two characters of array values in h1 elements copy -->
+    <!-- Conditionally apply url to image in React component -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
-            var ar=["Ayyappa","Sunanda","Love"]
-            var a1=<div>
-                {
-                    ar.map((s)=>{
-                        return <h1>{s.slice(0,2)}</h1>
-                    })
-                }
-            </div>
-        ReactDOM.render(a1,document.getElementById("d1"))
+            var a=+prompt()
+            var Abc=(()=>{
+                return <div><img src={(a%2===0)?"https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg":"https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg"} width="50%"/></div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
         </script>
     </body>
 </html>

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <!-- <script type="text/babel">
+            var Tlist=function(){
+                function add(){
+                    var a=document.getElementById("d2").value 
+                    setstudents([...students,a])
+                }
+                var[students,setstudents]=React.useState([
+                    "Ayyappa",
+                    "Anji",
+                    "vikas",
+                    "Tarun"
+                ])
+                return <div>
+                    <input type="text" name="" id="d2"/>
+                    <button onClick={()=>{add()}}>ADD</button>
+                    {students.map(function(s){
+                    return <li>{s}</li>
+                })}
+                </div>
+            }
+            ReactDOM.render(<Tlist/>,document.getElementById("d1"))
+        </script> -->
+        <script type="text/babel">
+            var Tlist=function(){
+                function add(){
+                    var a=document.getElementById("d2").value 
+                    setname([...name,a,ab])
+                    document.getElementById("d2").value=""
+                }
+                function ab(i){
+                    name.splice(i,1)
+                    setname([...name])
+                }
+                var [name,setname]=React.useState([
+                    "Tarun",
+                    "Swamy",
+                    "Ayyappa",
+                    "Nandhu"
+                ])
+                return <div>
+                    <input type="text" name="" id="d2"/>
+                    <button onClick={()=>{add()}}>ADD</button>
+                    {
+                        name.map((s)=>{
+                            return <li id="d3">{s}<button onClick={()=>{ab()}}>Del</button></li>
+                        })
+                    }
+                </div>
+            }
+            ReactDOM.render(<Tlist/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

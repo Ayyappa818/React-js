@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Implement a clock -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+             var ar = []
+             var i=1;
+            function abc(){
+                
+            }
+            setInterval(()=>{
+                var aa=document.getElementById("dd").innerHTML=i+"s"
+                i=i+1;
+                if(i===60){
+                    i=0;
+                }
+            abc()
+            },1000)
+            var jh1 = <div>
+                  <span id='dd'></span>
+                </div>
+      ReactDOM.render(jh1,document.getElementById("d3"))
+        </script>
+    </body>
+</html>

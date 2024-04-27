@@ -6,25 +6,7 @@
     </head>
     <!-- GenUI with JSX -->
     <body>
-        <form action="">
-            <input type="text" name="firstname" placeholder="Enter the firstname" onkeyup="handleInput(event)">
-            <br>
-            <input type="text" name="lastname" placeholder="Enter the lastname" onkeyup="handleInput(event)">
-            <br>
-            <input type="text" name="age" placeholder="Enter the age" onkeyup="handleInput(event)">
-            <br>
-            <button>Add Employee</button>
-        </form>
-        <table>
-            <thead>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Age</th>
-            </thead>
-            <tbody id="tb1">
-
-            </tbody>
-        </table>
+        <div id="d1"></div>
         <script type="text/babel">
              var employees = [
                 {
@@ -52,6 +34,41 @@
                     gender:'male'
                 }
             ]
+            
+            var ja1=<div>
+                <div>
+                <form action="">
+            <input type="text" name="firstname" placeholder="Enter the firstname" onkeyup="handleInput(event)"/>
+            <br/>
+            <input type="text" name="lastname" placeholder="Enter the lastname" onkeyup="handleInput(event)"/>
+            <br/>
+            <input type="text" name="age" placeholder="Enter the age" onkeyup="handleInput(event)"/>
+            <br/>
+            <button>Add Employee</button>
+        </form>
+        </div>
+            <table border="2">
+                    <thead>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        {
+                        employees.map((s)=>{
+                            return <tr>
+                                <td>{s.firstname}</td>
+                                <td>{s.lastname}</td>
+                                <td>{s.age}</td>
+                                <td><button onClick={(i)=>{deltask()}}>Del</button></td>
+                            </tr>
+                        })
+                    }
+                    </tbody>
+                </table>
+                </div>
+            ReactDOM.render(ja1,document.getElementById("d1"))
         </script>
     </body>
 </html>
