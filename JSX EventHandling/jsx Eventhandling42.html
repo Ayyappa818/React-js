@@ -8,23 +8,29 @@
     <body>
         <div id="d1"></div>
         <script type="text/babel">
-             var ar = []
-             var i=1;
+            // var ar = []
+            // function abc(){
+            // var date = new Date();
+            // var time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+            // document.getElementById('dd').innerHTML=time;
+            // }
+            // setInterval(()=>{
+            // abc()
+            // },1000)
+            // var jh1 = <div>
+            //     <h1 id='dd'></h1>
+            // </div>
+            // ReactDOM.render(jh1,document.getElementById("d1"))
             function abc(){
-                
+                var a=new Date();
+                var b=a.getHours()+":"+a.getMinutes()+":"+a.getSeconds()
+                document.getElementById("d2").innerHTML=b
             }
             setInterval(()=>{
-                var aa=document.getElementById("dd").innerHTML=i+"s"
-                i=i+1;
-                if(i===60){
-                    i=0;
-                }
-            abc()
+                abc()
             },1000)
-            var jh1 = <div>
-                  <span id='dd'></span>
-                </div>
-      ReactDOM.render(jh1,document.getElementById("d3"))
+            var js1= <div><h1 id="d2"></h1></div>
+            ReactDOM.render(js1,document.getElementById("d1"))
         </script>
     </body>
 </html>

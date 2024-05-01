@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Todolist with delete button in React Component -->
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            function Abc(){
+                var [to,setTo]=React.useState("")
+                var [x,setX]=React.useState([])
+                function xyz(e){
+                        setTo(e.target.value)
+                    }
+                    function xy(e){
+                        setX([...x,to])
+                    }
+                    function yz(i){
+                        var del=[...x]
+                        del.splice(i,1)
+                        setX(del)
+                    }
+                return <div>
+                    <input type="text" onChange={xyz} name="" />
+                    <button onClick={(e)=>{xy(e)}}>TOdolist</button>
+                    <ul>
+                        {
+                            x.map((s,i)=>{
+                                return <li>{s}<button onClick={()=>{yz(i)}}>Del</button></li>
+                            })
+                        }
+                    </ul>
+                </div>
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>

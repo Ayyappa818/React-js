@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Display values in h1 in React Component -->
+    <body>
+        <div id="root"></div>
+         <script type="text/babel">
+           function Abc(){
+            var [y,setY]=React.useState("")
+            var[x,setX]=React.useState([
+          {
+            firstname:"Praveen",
+            lastname:"Gubbala",
+            age:40,
+            gender:'male'
+          },
+          {
+            firstname:"Smrithi",
+            lastname:"mandana",
+            age:25,
+            gender:'female'
+          },
+          {
+            firstname:"mithali",
+            lastname:"raj",
+            age:39,
+            gender:'female'
+          },
+          {
+            firstname:"Rohit",
+            lastname:"Sharma",
+            age:35,
+            gender:'male'
+          },
+          {
+            firstname:"Sachin",
+            lastname:"Tendulkar",
+            age:50,
+            gender:'male'
+          }
+        ])
+
+        function abd(e,i){
+          console.log(i)
+             setY(e.target.innerHTML+"index of"+i)
+        }
+            
+            return <div>
+                <ul>
+                        {  
+                            x.map((s,i)=>{
+                            return <div>
+                                 <li onClick={()=>{abd(event,i)}}>{s.firstname}</li>
+                            </div> 
+                        })
+                    }
+                </ul>
+                <h1>{y}</h1>
+            </div>
+        }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>

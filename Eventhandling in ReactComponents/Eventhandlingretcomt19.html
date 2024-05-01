@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Display respective image on radio button value in React Component -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var Abc=(()=>{
+                var [xy,setXy]=React.useState("male")
+                var a="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUa3BHdTcILgBG6OMNHBSdftbh8-bpuM73b53d9uuB7w&s"
+                var b="https://thumb.ac-illust.com/be/bee98c70d1cfc02d0f387d2852464bf5_t.jpeg"
+                function abc(e){
+                    xy==="male"
+                    setXy(e.target.value)
+                    xy==="female"
+                    setXy(e.target.value)
+                }
+                return <div>
+                    <input onChange={abc} type="radio" value="male" name="gender" />:Male
+                    <input onChange={abc} type="radio" value="female" name="gender" />:Female
+                    <img src={xy==="male"?a:b} alt="" width="100px"/>
+                </div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

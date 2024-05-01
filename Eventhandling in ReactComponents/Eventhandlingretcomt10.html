@@ -4,19 +4,21 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Console something on button click in React Component -->
+    <!-- Console text box value on button click in React Component -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
             var Abc=(()=>{
-                function abc(e){
-                    console.log("Hello Edupoly")
+                function xyz(e){
+                    setXy(e.target.value)
                 }
-                var[xy,setXy]=React.useState("Click here to see alert in Console")
+                function abc(e){
+                    console.log(xy)
+                }
+                var [xy,setXy]=React.useState("")
                 return <div>
-                    {
-                        <button onClick={(e)=>{abc(e)}}>{xy}</button>
-                    }
+                    <input type="text" name="" value={xy} onChange={xyz}/>
+                    <button onClick={(e)=>{abc(e)}}>Print the value in Console</button>
                 </div>
             })
             ReactDOM.render(<Abc/>,document.getElementById("d1"))

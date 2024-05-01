@@ -13,9 +13,9 @@
                 document.getElementById("d3").innerHTML=""
                 ar.push(x)
                 ar.forEach((a)=>{
+                    var y=document.getElementById("d3")
                     var z=document.createElement("li")
                     z.innerHTML=a
-                    var y=document.getElementById("d3")
                     y.appendChild(z)
                 })
             }

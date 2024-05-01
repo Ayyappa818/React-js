@@ -4,19 +4,22 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Console something on button click in React Component -->
+    <!-- Reset the textbox text on a button click in React Component -->
     <body>
         <div id="d1"></div>
-        <script type="text/babel">
+         <script type="text/babel">
             var Abc=(()=>{
-                function abc(e){
-                    console.log("Hello Edupoly")
+                 var[xy,setXy]=React.useState("")
+                function xyz(e){
+                    setXy(e.target.value)
                 }
-                var[xy,setXy]=React.useState("Click here to see alert in Console")
+                function abc(){
+                    setXy("")    
+                }
                 return <div>
-                    {
-                        <button onClick={(e)=>{abc(e)}}>{xy}</button>
-                    }
+                    <input type="text" value={xy} onChange={(e)=>{xyz(e)}} id="d2"/>
+                    <button onClick={()=>{abc()}}>reset</button>
+                    <h1>{xy}</h1>
                 </div>
             })
             ReactDOM.render(<Abc/>,document.getElementById("d1"))

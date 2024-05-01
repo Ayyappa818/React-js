@@ -4,20 +4,16 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Console something on button click in React Component -->
+    <!-- Display the text of h1 on click in console in React Component -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
             var Abc=(()=>{
                 function abc(e){
-                    console.log("Hello Edupoly")
+                    console.log(e.target.innerHTML)
                 }
-                var[xy,setXy]=React.useState("Click here to see alert in Console")
-                return <div>
-                    {
-                        <button onClick={(e)=>{abc(e)}}>{xy}</button>
-                    }
-                </div>
+                var [xy,setXy]=React.useState("Welcome To Edupoly ReactJS")
+                return <h1 onClick={(e)=>{abc(e)}}>{xy}</h1>
             })
             ReactDOM.render(<Abc/>,document.getElementById("d1"))
         </script>

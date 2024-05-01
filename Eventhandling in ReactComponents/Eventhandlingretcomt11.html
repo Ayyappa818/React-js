@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <!-- Display text box value in h1 on button click in React Component -->
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+         var Abc=(()=>{
+            var [xy,setXy]=React.useState("")
+            var [yz,setYz]=React.useState("")
+                function lmn(e){
+                    setXy(e.target.value)
+                }
+                function abc(){
+                    // console.log("hii")
+                    setYz(xy)
+                }
+            
+                return <div>
+                    <input type="text"  onChange={lmn}/>
+                    <button onClick={()=>{abc()}}>Print the value in h1</button>
+                    <h1>{yz}</h1>
+                </div>
+            })
+            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+        </script>
+    </body>
+</html>

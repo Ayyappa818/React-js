@@ -4,22 +4,21 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Console something on button click in React Component -->
+    <!-- Push text box value to an array console the array in React Component -->
     <body>
-        <div id="d1"></div>
+        <div id="root"></div>
         <script type="text/babel">
             var Abc=(()=>{
+                var [x,setX]=React.useState([])
                 function abc(e){
-                    console.log("Hello Edupoly")
+                    console.log(x)
                 }
-                var[xy,setXy]=React.useState("Click here to see alert in Console")
                 return <div>
-                    {
-                        <button onClick={(e)=>{abc(e)}}>{xy}</button>
-                    }
+                    <input type="text" name="" id=""/>
+                    <button onClick={()=>{abc(event)}}>ADD in array</button>
                 </div>
             })
-            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
         </script>
     </body>
 </html>

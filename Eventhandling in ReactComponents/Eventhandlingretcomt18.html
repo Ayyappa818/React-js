@@ -4,19 +4,22 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Console something on button click in React Component -->
+    <!-- Display radio button value on check in React Component -->
     <body>
         <div id="d1"></div>
         <script type="text/babel">
             var Abc=(()=>{
+                var [xy,setXy]=React.useState("")
                 function abc(e){
-                    console.log("Hello Edupoly")
+                    setXy(e.target.value)
                 }
-                var[xy,setXy]=React.useState("Click here to see alert in Console")
+                function ab(e){
+                    setXy(e.target.value)
+                }
                 return <div>
-                    {
-                        <button onClick={(e)=>{abc(e)}}>{xy}</button>
-                    }
+                    <input type="radio" value="India" onChange={abc}/>IND <br/>
+                    <input type="radio" value="United states of America" onChange={ab}/>USA <br/>
+                    <h1>{xy}</h1>
                 </div>
             })
             ReactDOM.render(<Abc/>,document.getElementById("d1"))

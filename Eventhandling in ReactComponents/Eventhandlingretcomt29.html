@@ -4,22 +4,22 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
-    <!-- Console event object on button click in React Component -->
+    <!-- Display Decremented value variable value in h1 on a button click
+in React Component -->
     <body>
-        <div id="d1"></div>
+        <div id="root"></div>
         <script type="text/babel">
-            var Abc=(()=>{
-                function abc(e){
-                    console.log(e)
+            function Abc(){
+                var[dec,setDec]=React.useState(200)
+                function abc(){
+                    setDec(dec-1)
                 }
-                var[xy,setXy]=React.useState("Hello Edupoly")
                 return <div>
-                    {
-                        <button onClick={(e)=>{abc(e)}}>{xy}</button>
-                    }
+                    <h1>{dec}</h1>
+                    <button onClick={()=>{abc()}}>Decrement</button>
                 </div>
-            })
-            ReactDOM.render(<Abc/>,document.getElementById("d1"))
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
         </script>
     </body>
 </html>
